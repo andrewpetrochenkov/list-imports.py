@@ -2,12 +2,19 @@
 import ast
 import public
 
+@public.add
+def get(path):
+    """return a list of python file imports"""
+    code = open(path).read()
+    return parse(code)
+
+
 
 @public.add
-def get(string):
-    """return a list of imports"""
+def parse(code):
+    """return a list of python code imports"""
     imports = set()
-    tree = ast.parse(string)
+    tree = ast.parse(code)
     for node in ast.walk(tree):
         if isinstance(node, ast.Import):
             for subnode in node.names:

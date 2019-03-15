@@ -14,7 +14,8 @@ $ [sudo] pip install list-imports
 #### Functions
 function|`__doc__`
 -|-
-`list_imports.get(string)` |return a list of imports
+`list_imports.get(path)` |return a list of python file imports
+`list_imports.parse(code)` |return a list of python code imports
 
 #### CLI
 usage|`__doc__`

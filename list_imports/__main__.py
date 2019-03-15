@@ -15,7 +15,7 @@ USAGE = 'python -m %s path ...' % MODULE_NAME
 def _cli(paths):
     imports = []
     for path in paths:
-        imports+= list(list_imports.get(open(path).read()))
+        imports+= list(list_imports.get(path))
     imports = list(set(imports))
     if imports:
         print("\n".join(sorted(imports)))
