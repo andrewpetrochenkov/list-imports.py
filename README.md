@@ -1,5 +1,6 @@
 <!--
 https://pypi.org/project/readme-generator/
+https://pypi.org/project/python-readme-generator/
 -->
 
 [![](https://img.shields.io/pypi/pyversions/list-imports.svg?longCache=True)](https://pypi.org/project/list-imports/)
@@ -17,7 +18,7 @@ function|`__doc__`
 `list_imports.get(path)` |return a list of python file imports
 `list_imports.parse(code)` |return a list of python code imports
 
-#### CLI
+#### Executable modules
 usage|`__doc__`
 -|-
 `python -m list_imports path ...` |list a python file(s) imports
@@ -34,5 +35,5 @@ $ find . -type f -name "*.py" | xargs python -m list_imports | awk -F"." '{print
 ```
 
 <p align="center">
-    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
 </p>
