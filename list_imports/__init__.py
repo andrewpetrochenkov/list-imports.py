@@ -1,16 +1,15 @@
-#!/usr/bin/env python
-import ast
-import public
+__all__ = ['get', 'parse']
 
-@public.add
+
+import ast
+
+
 def get(path):
     """return a list of python file imports"""
     code = open(path).read()
     return parse(code)
 
 
-
-@public.add
 def parse(code):
     """return a list of python code imports"""
     imports = set()
