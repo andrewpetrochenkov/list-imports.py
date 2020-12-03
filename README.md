@@ -18,9 +18,14 @@ import list_imports
 imports = list_imports.get("file.py")
 ```
 
-or from string:
+from string:
 ```python
 imports = list_imports.parse(open("file.py").read())
+```
+
+absolute imports only
+```python
+list(filter(lambda i:i[0]!='.',list_imports.get("file.py")))
 ```
 
 cli:
